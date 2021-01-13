@@ -1,0 +1,20 @@
+UNF:
+DB(patientNo, fullName, wardNo, wardName, bedNo, [drugNo, drugName, description, dosage, methodOfAdmin, start, unitesPerDay, finish])
+
+1NF:
+DB: *patientNo*, pName, wardNo, wardName, bedNo, *drugNo*, drugName, descr, dosage,moA, *start*, finish, unitsPerDay
+
+2NF:
+patient: *pNO*, pName, waNo, waName, bedNo
+drug: *drugNo*, dName, description, dosage, moA
+DB: *pano*, *drugno*, unitsperday, *start, finish
+
+3NF:
+patient: *pNO*, pName, waNo, bedNo
+ward: *waNo*, waName
+drug: *drugNo*, dName, description, dosage, moA
+DB: *paNo*, *drugno*, unitsperday, *start, finish
+
+BCNF:
+equal to 3NF
+
